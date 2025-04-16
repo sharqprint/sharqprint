@@ -1,198 +1,75 @@
-/* General Styles */
-body {
-    font-family: 'Al Qabas', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fefefe;
-    color: #1f1d1e;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: right;
-    scroll-behavior: smooth;
-    position: relative;
-    overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطبعة الشرق</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="Unti1222.png" alt="مطبعة الشرق" class="logo">
+    </header>
 
-/* Background Decorations */
-body::before {
-    content: "الإبداع والاحترافية";
-    font-size: 20rem;
-    font-weight: bold;
-    color: rgba(234, 204, 16, 0.1);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    z-index: -1;
-    pointer-events: none;
-}
-body::after {
-    content: "الطباعة والتصميم";
-    font-size: 15rem;
-    font-weight: bold;
-    color: rgba(0, 179, 245, 0.1);
-    position: fixed;
-    bottom: 10%;
-    right: 10%;
-    transform: rotate(45deg);
-    z-index: -1;
-    pointer-events: none;
-}
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#social-media">التواصل الاجتماعي</a>
+        <a href="#about-us">من نحن</a>
+    </nav>
 
-/* Header */
-header {
-    background-color: #1f1d1e;
-    color: #fefefe;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-}
-header .logo {
-    width: 200px;
-    height: auto;
-}
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <div>
+            <h2>مرحبًا بكم في مطبعة الشرق</h2>
+            <p>شريكك الإبداعي في خدمات الطباعة والتصميم</p>
+        </div>
+    </section>
 
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #1f1d1e;
-}
-nav a {
-    color: #fefefe;
-    padding: 15px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-nav a:hover {
-    background-color: #eacc10;
-    border-radius: 5px;
-}
+    <!-- Social Media Section -->
+    <section id="social-media">
+        <h2>تواصل معنا</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/share/12KC8phnxnT/" class="facebook"></a></li>
+            <li><a href="https://wa.me/qr/7KGGV435AWOVB1" class="whatsapp"></a></li>
+            <li><a href="https://www.instagram.com/sharq.print/" class="instagram"></a></li>
+            <li><a href="https://t.me/Abdulazem_moazen" class="telegram"></a></li>
+        </ul>
+    </section>
 
-/* Sections */
-section {
-    padding: 40px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-section.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+    <!-- About Us Section -->
+    <section id="about-us">
+        <h2>من نحن</h2>
+        <p>
+            مطبعة الشرق هي واحدة من أعرق المطابع في المنطقة، حيث تأسست في خمسينيات القرن الماضي.
+            نحن متخصصون في تقديم خدمات الطباعة والتصميم الاحترافية لتلبية احتياجات عملائنا.
+            فريقنا يضم خبراء مكرسين لتقديم نتائج عالية الجودة بروح إبداعية ودقة. سواء كنت بحاجة إلى بطاقات عمل، لافتات، أو تصاميم مخصصة،
+            نحن هنا لتغطية جميع احتياجاتك. ثق بنا لنحوّل أفكارك إلى واقع!
+        </p>
+    </section>
 
-/* Home Section */
-#home {
-    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fefefe;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-#home h2 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-#home p {
-    font-size: 1.2rem;
-}
+    <!-- Footer -->
+    <footer>
+        <p>
+            تواصل معنا عبر البريد الإلكتروني:
+            <span class="tooltip">
+                <a id="emailToCopy">malfateh977@gmail.com</a>
+                <span class="tooltiptext" id="emailTooltip">نسخ البريد الإلكتروني</span>
+            </span>
+        </p>
+        <p>
+            أو عبر الهاتف:
+            <span class="tooltip">
+                <a id="phoneToCopy">+963944359000</a>
+                <span class="tooltiptext" id="phoneTooltip">نسخ رقم الهاتف</span>
+            </span>
+        </p>
+        <p>&copy; 2023 مطبعة الشرق. جميع الحقوق محفوظة.</p>
+    </footer>
 
-/* Social Media Section */
-#social-media ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-#social-media li {
-    margin: 15px 0;
-}
-#social-media a {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 50%;
-    color: #fefefe;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-align: center;
-    transition: opacity 0.3s ease;
-}
-#social-media .facebook {
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png') no-repeat center center / cover;
-}
-#social-media .whatsapp {
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png') no-repeat center center / cover;
-}
-#social-media .instagram {
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png') no-repeat center center / cover;
-}
-#social-media .telegram {
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png') no-repeat center center / cover;
-}
-#social-media a:hover {
-    opacity: 0.8;
-    transform: scale(1.1);
-}
-
-/* About Us Section */
-#about-us {
-    line-height: 1.6;
-}
-#about-us h2 {
-    margin-bottom: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #1f1d1e;
-    color: #fefefe;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-}
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-footer a {
-    color: #eacc10;
-    text-decoration: none;
-    cursor: pointer;
-    transition: text-decoration 0.3s ease;
-}
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Tooltip Styling */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
